@@ -4,7 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes');
+var load    = require('express-load');
+  //, routes = require('./routes');
 
 var app = module.exports = express.createServer();
 
@@ -29,9 +30,11 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
-app.get('/teste', routes.teste);
-app.get('/testes', routes.testes);
+// app.get('/', routes.index);
+// app.get('/teste', routes.teste);
+// app.get('/testes', routes.testes);
+
+load('models').then('controllers').then('routes').into(app);
 
 app.listen(3000, function(){
   console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
