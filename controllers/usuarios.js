@@ -36,7 +36,7 @@ module.exports = function(app){
 				if(err){
 					console.log(err);
 				}
-				req.flash('info','Usuário cadastrado com sucesso!');
+				//req.flash('info','Usuário cadastrado com sucesso!');
 				res.redirect('/usuarios');
 			});
 		},
