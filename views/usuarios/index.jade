@@ -1,5 +1,25 @@
 extends ../layout
 block content
-	h1 Pagina de Usuarios
+	h1 Listagem de Usuarios
 	br
 	a(href="/" title="home" ) Voltar
+	br
+	br
+	table(class="table well")
+		thead
+			tr
+				th Id:
+				th Nome:
+				th Login:
+				th Senha:
+				th Data:
+			tbody
+				each valor, i in lista
+					tr
+						td #{valor._id}
+						td #{valor.nome}
+						td #{valor.login}
+						td #{valor.senha}
+						td #{valor.data_cad}
+
+
