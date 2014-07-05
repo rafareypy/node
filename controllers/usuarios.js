@@ -36,7 +36,7 @@ module.exports = function(app){
 				if(err){
 					console.log(err);
 				}
-				//req.flash('info','Usuário cadastrado com sucesso!');
+				req.flash('info','Usuário cadastrado com sucesso!');
 				res.redirect('/usuarios');
 			});
 		},
@@ -63,7 +63,7 @@ module.exports = function(app){
 							if(err){
 								console.log(err);
 							}else{
-								//req.flash('info', 'Usuário atualizado com sucesso!');
+								req.flash('info', 'Usuário atualizado com sucesso!');
 							  res.redirect('/usuarios');
 							}
 						});
@@ -86,7 +86,7 @@ module.exports = function(app){
 				if (err){
 					console.log(err);
 				}else{
-					//req.flash('info', 'Usuário excluído com sucesso!');
+					req.flash('info', 'Usuário excluído com sucesso!');
 					res.redirect('/usuarios');
 				}
 			});

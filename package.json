@@ -1,11 +1,15 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-      "express": "2.5.8"
-    , "express-load": "*"
-    , "mongoose": "*"
-    , "jade": ">= 0.0.1"
+  "name": "waibtec",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.7",
+    "express-load": "*",
+    "jade": "*",
+    "mongoose": "*",
+    "express-flash": "*"
   }
 }

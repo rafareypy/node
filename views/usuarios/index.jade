@@ -5,9 +5,10 @@ block content
 	br
 	a(href="/usuarios/create" title="Cadastrar" class="btn btn-success"  ) Cadastrar	
 	br
-	if msgUpdate
-		div(class="alert alert-info")
-			p Registro Atualizado com Sucesso!
+	br
+	if messages.info
+			div(class="alert alert-info")
+				p= messages.info	
 	br
 	table(class="table")
 		thead
