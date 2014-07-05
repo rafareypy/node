@@ -63,7 +63,7 @@ module.exports = function(app){
 							if(err){
 								console.log(err);
 							}else{
-								req.flash('info', 'Usuário atualizado com sucesso!');
+								//req.flash('info', 'Usuário atualizado com sucesso!');
 							  res.redirect('/usuarios');
 							}
 						});
